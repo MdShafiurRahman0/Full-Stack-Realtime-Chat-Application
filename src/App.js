@@ -1,5 +1,5 @@
 import './App.css';
-import AuthForm from './AuthForm';
+import AuthFormgo from './AuthForm';
 
 function App() {
   return (
