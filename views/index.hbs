@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">   
+    <title>ChatHive - Home</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+        <a class="navbar-brand" href="#">ChatHive</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                {{#if user}}
+                    <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                {{else}}
+                    <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                {{/if}}
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="jumbotron text-center">
+            {{#if user}}
+                <h1 class="display-4">👋 Welcome, {{user.name}}!</h1>
+                <p class="lead">You are now connected. Start chatting and stay in touch with your friends, team, and community.</p>
+                <a class="btn btn-success btn-lg" href="/chat" role="button">Go to Chat</a>
+            {{else}}
+                <h1 class="display-4">💬 Welcome to <strong>ChatHive</strong></h1>
+                <p class="lead">Your space for instant, secure, and real-time conversations with friends, teams, and communities — all in one place.</p>
+                <hr class="my-4">
+                <p>Stay connected anytime, anywhere. ChatHive lets you share ideas, collaborate on projects, and build meaningful connections through lightning-fast messaging.</p>
+                <a class="btn btn-primary btn-lg" href="/register" role="button">🚀 Get Started</a>
+            {{/if}}
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</body>
+</html>
