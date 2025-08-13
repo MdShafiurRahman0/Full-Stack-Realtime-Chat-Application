@@ -95,3 +95,7 @@ The application will be available at `http://localhost:5000`.
 
 ### Home Page (Logged In)
 ![Home Page (Logged In)](https://via.placeholder.com/468x300?text=Home+Page+Logged+In)
+
+
+[Watch Demo Video](public/screen-capture.webm)
+
