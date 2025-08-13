@@ -5,11 +5,6 @@
 ![Demo GIF](assets/screen-capture.gif)
 
 
-[![Watch Demo Video](https://img.youtube.com/vi/a_2aUBA-ek8/0.jpg)](https://youtu.be/a_2aUBA-ek8)  
-*Click the image to watch the demo video on YouTube*
-
-
-
 
 # Node.js & MySQL Authentication Project
 
