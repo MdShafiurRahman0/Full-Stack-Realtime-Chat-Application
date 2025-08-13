@@ -75,6 +75,11 @@ npm start
 
 The application will be available at `http://localhost:5000`.
 
+## Live Preview
+
+<video src="https://www.w3schools.com/html/mov_bbb.webm" controls="controls" style="max-width: 720px;">
+</video>
+
 ## Screenshots
 
 *You can add screenshots of your application here to showcase its features.*
