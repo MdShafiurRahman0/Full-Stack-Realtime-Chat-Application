@@ -1,3 +1,7 @@
+[![Watch Demo Video](https://img.youtube.com/vi/a_2aUBA-ek8/0.jpg)](https://youtu.be/a_2aUBA-ek8)  
+*Click the image to watch the demo video on YouTube*
+
+
 # Node.js & MySQL Authentication Project
 
 This project is a simple web application that demonstrates user authentication using Node.js, Express, and MySQL. It includes features such as user registration, login, and logout, with secure password hashing and JWT-based authentication.
