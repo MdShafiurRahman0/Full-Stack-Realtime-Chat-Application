@@ -34,7 +34,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/logout">
+                            <a class="nav-link" href="/auth/logout">
                                 <i class="fas fa-sign-out-alt me-1"></i>Logout
                             </a>
                         </li>
@@ -133,31 +133,29 @@
                 </div>
                 
                 <div class="col-lg-6">
-                    {{#unless user}}
-                        <!-- Video Section for Guests -->
-                        <div class="video-section">
-                            <div class="video-container">
-                                <div class="video-header">
-                                    <h4 class="video-title">
-                                        <i class="fas fa-play-circle text-primary me-2"></i>
-                                        See ChatHive in Action
-                                    </h4>
-                                    <p class="video-subtitle">Watch our demo to see how easy and beautiful chatting can be</p>
-                                </div>
-                                <div class="video-wrapper">
-                                    <video controls class="demo-video">
-                                        <source src="/screen-capture.webm" type="video/webm">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                    <div class="video-overlay">
-                                        <div class="play-button">
-                                            <i class="fas fa-play"></i>
-                                        </div>
+                    <!-- Video Section -->
+                    <div class="video-section">
+                        <div class="video-container">
+                            <div class="video-header">
+                                <h4 class="video-title">
+                                    <i class="fas fa-play-circle text-primary me-2"></i>
+                                    See ChatHive in Action
+                                </h4>
+                                <p class="video-subtitle">Watch our demo to see how easy and beautiful chatting can be</p>
+                            </div>
+                            <div class="video-wrapper">
+                                <video controls class="demo-video">
+                                    <source src="/screen-capture.webm" type="video/webm">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-button">
+                                        <i class="fas fa-play"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    {{/unless}}
+                    </div>
                 </div>
             </div>
         </div>

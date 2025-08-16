@@ -157,3 +157,15 @@ exports.login = async (req, res) => {
     );
   }
 };
+
+// Function to handle user logout
+exports.logout = (req, res) => {
+  // To log out, we overwrite the existing JWT cookie with an expired one
+  res.cookie("jwt", "logout", {
+    // Set the cookie to expire 1 second from now
+    expires: new Date(Date.now() + 1000),
+    httpOnly: true,
+  });
+  // Redirect the user to the home page after logging out
+  res.status(200).redirect("/");
+};

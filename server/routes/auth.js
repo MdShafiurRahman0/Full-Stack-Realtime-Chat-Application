@@ -6,10 +6,6 @@ const express = require("express");
 // This controller handles user registration, login, and other auth operations
 const authController = require("../controllers/auth");
 
-// Import the user controller which contains user-related operations
-// This controller handles user logout and other user management functions
-const userController = require("../controllers/user");
-
 // Create a new router instance specifically for authentication routes
 // This keeps authentication logic separate from other application routes
 const router = express.Router();
@@ -24,7 +20,7 @@ router.post("/login", authController.login);
 
 // Route for user logout (GET request to /auth/logout)
 // This route handles user logout and session cleanup
-router.get("/logout", userController.logout);
+router.get("/logout", authController.logout);
 
 // Export the router so it can be used in the main app.js file
 // This makes all the authentication routes available to the main application
