@@ -24,7 +24,7 @@ const cookieParser = require("cookie-parser");
 
 // Load environment variables from the .env file in the root directory
 // This makes variables like JWT_SECRET and DATABASE_URL available in process.env
-dotenv.config({ path: "./.env" });
+dotenv.config({ path: "../.env" });
 
 // Create an Express application instance
 // This is the main application object that handles all web requests
@@ -40,7 +40,7 @@ const io = new Server(server);
 
 // Define the path to the public directory where static files are stored
 // Static files include CSS, JavaScript, images, and other assets
-const publicDirectory = path.join(__dirname, "./public");
+const publicDirectory = path.join(__dirname, "../client/public");
 
 // Serve static files from the public directory
 // This makes files like style.css and chat.js accessible to web browsers
@@ -70,6 +70,8 @@ app.use((req, res, next) => {
 // Set the view engine to Handlebars (HBS)
 // Handlebars is a template engine that allows us to create dynamic HTML pages
 app.set("view engine", "hbs");
+// Define the path to the views directory for the template engine
+app.set("views", path.join(__dirname, "../client/views"));
 
 // Define and use the main page routes (home, login, register, chat)
 // These routes handle the main pages of the application
