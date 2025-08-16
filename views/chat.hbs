@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Modern Header -->
+        <div class="chat-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="chat-avatar">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="chat-info">
+                        <h3>Chat Room</h3>
+                        <div class="status-container">
+                            <span class="status-dot"></span>
+                            <span class="status-text">Live Chat</span>
+                            <span class="online-count">2 online</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <button class="header-btn" title="Search messages">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="header-btn" title="More options">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                    <button class="header-btn theme-toggle" title="Toggle dark mode" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <span>{{user.name.[0]}}</span>
+                        </div>
+                        <div class="user-dropdown">
+                            <span class="user-name">{{user.name}}</span>
+                            <a href="/logout" class="logout-btn" title="Logout">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enhanced Messages Area -->
+        <div class="messages-container" id="messages">
+            <div class="messages-wrapper">
+                {{#each messages}}
+                <div class="message-wrapper {{#if isCurrentUser}}message-own{{else}}message-other{{/if}}">
+                    {{#unless isCurrentUser}}
+                    <div class="message-avatar">
+                        <span>{{username.[0]}}</span>
+                    </div>
+                    {{/unless}}
+                    <div class="message-bubble">
+                        {{#unless isCurrentUser}}
+                        <div class="message-sender">{{this.username}}</div>
+                        {{/unless}}
+                        <div class="message-text">{{this.message}}</div>
+                        <div class="message-time">
+                            <i class="far fa-clock"></i>
+                            {{this.time}}
+                        </div>
+                    </div>
+                    {{#if isCurrentUser}}
+                    <div class="message-avatar own-avatar">
+                        <span>{{username.[0]}}</span>
+                    </div>
+                    {{/if}}
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <!-- Modern Input Area -->
+        <div class="input-container">
+            <form id="chat-form" class="input-form">
+                <div class="input-wrapper">
+                    <button type="button" class="attach-btn" title="Attach file">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <div class="input-field-container">
+                        <input type="text" id="message-input" class="message-input" placeholder="Type your message here..." autocomplete="off">
+                        <div class="input-actions">
+                            <button type="button" class="emoji-btn" title="Add emoji">
+                                <i class="far fa-smile"></i>
+                            </button>
+                            <button type="submit" class="send-btn" title="Send message">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const userName = "{{user.name}}";
+        const userId = "{{user.id}}";
+    </script>
+    <script src="/chat.js"></script>
+</body>
+</html>
