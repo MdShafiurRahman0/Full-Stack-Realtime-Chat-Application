@@ -1,6 +1,6 @@
-/* Modern Chat Application Styles - 2024 Design */
+
 :root {
-    /* Modern Color Palette */
+    
     --primary-color: #6366f1;
     --primary-hover: #4f46e5;
     --primary-light: #e0e7ff;
@@ -8,25 +8,25 @@
     --accent-color: #06b6d4;
     --success-color: #10b981;
     
-    /* Text Colors */
+    
     --text-primary: #0f172a;
     --text-secondary: #475569;
     --text-tertiary: #94a3b8;
     --text-inverse: #ffffff;
     
-    /* Background Colors */
+    
     --bg-primary: #ffffff;
     --bg-secondary: #f8fafc;
     --bg-tertiary: #f1f5f9;
     --bg-elevated: #ffffff;
     
-    /* Message Colors */
+    
     --message-own: #6366f1;
     --message-other: #f1f5f9;
     --message-own-text: #ffffff;
     --message-other-text: #0f172a;
     
-    /* Border & Shadow */
+    
     --border-color: #e2e8f0;
     --border-light: #f1f5f9;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -34,12 +34,12 @@
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     
-    /* Transitions */
+    
     --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
     
-    /* Spacing */
+    
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
@@ -48,9 +48,9 @@
     --spacing-2xl: 3rem;
 }
 
-/* Dark Mode Variables */
+
 [data-theme="dark"] {
-    /* Dark Color Palette */
+    
     --primary-color: #818cf8;
     --primary-hover: #6366f1;
     --primary-light: #312e81;
@@ -58,25 +58,25 @@
     --accent-color: #22d3ee;
     --success-color: #34d399;
     
-    /* Dark Text Colors */
+    
     --text-primary: #f8fafc;
     --text-secondary: #cbd5e1;
     --text-tertiary: #64748b;
     --text-inverse: #0f172a;
     
-    /* Dark Background Colors */
+    
     --bg-primary: #0f172a;
     --bg-secondary: #1e293b;
     --bg-tertiary: #334155;
     --bg-elevated: #1e293b;
     
-    /* Dark Message Colors */
+    
     --message-own: #818cf8;
     --message-other: #334155;
     --message-own-text: #ffffff;
     --message-other-text: #f1f5f9;
     
-    /* Dark Border & Shadow */
+    
     --border-color: #334155;
     --border-light: #475569;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
@@ -100,7 +100,7 @@ body {
     font-weight: 400;
 }
 
-/* Chat Container */
+
 .chat-container {
     display: flex;
     flex-direction: column;
@@ -114,7 +114,7 @@ body {
     position: relative;
 }
 
-/* Modern Header */
+
 .chat-header {
     background: var(--bg-elevated);
     border-bottom: 1px solid var(--border-light);
@@ -304,7 +304,7 @@ body {
     color: #ef4444;
 }
 
-/* Messages Container */
+
 .messages-container {
     flex: 1;
     overflow-y: auto;
@@ -321,7 +321,7 @@ body {
     margin: 0 auto;
 }
 
-/* Custom Scrollbar */
+
 .messages-container::-webkit-scrollbar {
     width: 8px;
 }
@@ -340,7 +340,7 @@ body {
     background: var(--text-tertiary);
 }
 
-/* Message Wrapper */
+
 .message-wrapper {
     display: flex;
     align-items: flex-end;
@@ -358,7 +358,7 @@ body {
     align-self: flex-start;
 }
 
-/* Message Avatar */
+
 .message-avatar {
     width: 36px;
     height: 36px;
@@ -385,7 +385,7 @@ body {
     background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
 }
 
-/* Message Bubble */
+
 .message-bubble {
     background: var(--message-other);
     padding: var(--spacing-md) var(--spacing-lg);
@@ -414,7 +414,7 @@ body {
     background: var(--primary-hover);
 }
 
-/* Message Sender */
+
 .message-sender {
     font-size: 12px;
     font-weight: 600;
@@ -424,7 +424,7 @@ body {
     letter-spacing: 0.025em;
 }
 
-/* Message Text */
+
 .message-text {
     font-size: 15px;
     line-height: 1.5;
@@ -432,7 +432,7 @@ body {
     margin-bottom: var(--spacing-sm);
 }
 
-/* Message Time */
+
 .message-time {
     font-size: 11px;
     color: var(--text-tertiary);
@@ -451,7 +451,7 @@ body {
     opacity: 1;
 }
 
-/* Input Container */
+
 .input-container {
     background: var(--bg-elevated);
     border-top: 1px solid var(--border-light);
@@ -600,7 +600,7 @@ body {
     transform: translateY(0) scale(0.95);
 }
 
-/* Animation for new messages */
+
 .message-wrapper {
     animation: slideInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -616,7 +616,7 @@ body {
     }
 }
 
-/* Typing indicator */
+
 .typing-indicator {
     display: flex;
     align-items: center;
@@ -653,7 +653,7 @@ body {
     }
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     .chat-container {
         max-width: 100%;
@@ -730,7 +730,7 @@ body {
     }
 }
 
-/* Focus states for accessibility */
+
 .header-btn:focus,
 .attach-btn:focus,
 .emoji-btn:focus,
@@ -739,13 +739,13 @@ body {
     outline-offset: 2px;
 }
 
-/* Loading states */
+
 .loading {
     opacity: 0.6;
     pointer-events: none;
 }
 
-/* Hover effects for interactive elements */
+
 .chat-avatar:hover,
 .message-avatar:hover,
 .header-btn:hover,
@@ -755,7 +755,7 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
-/* Theme Toggle Button */
+
 .theme-toggle {
     position: relative;
     overflow: hidden;
@@ -769,7 +769,7 @@ body {
     transform: rotate(15deg) scale(1.1);
 }
 
-/* Dark mode specific button styles */
+
 [data-theme="dark"] .theme-toggle {
     background: var(--primary-light);
     color: var(--primary-color);
@@ -780,7 +780,7 @@ body {
     color: var(--text-inverse);
 }
 
-/* Theme transition for smooth switching */
+
 body {
     transition: background-color var(--transition-normal), color var(--transition-normal);
 }
@@ -797,10 +797,9 @@ body {
                 box-shadow var(--transition-normal);
 }
 
-/* Home Page Styles - Modern Design */
-/* These styles are specifically for the home page and won't affect the chat */
 
-/* Home Page Specific Variables */
+
+
 :root {
     --hero-gradient-1: #667eea;
     --hero-gradient-2: #764ba2;
@@ -810,7 +809,7 @@ body {
     --text-gradient-2: #764ba2;
 }
 
-/* Home Page Body */
+
 body.home-page {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: linear-gradient(135deg, var(--hero-gradient-1) 0%, var(--hero-gradient-2) 100%);
@@ -819,7 +818,7 @@ body.home-page {
     overflow-x: hidden;
 }
 
-/* Navigation */
+
 .navbar {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -869,7 +868,7 @@ body.home-page {
     box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
 }
 
-/* Hero Section */
+
 .hero-section {
     position: relative;
     min-height: 100vh;
@@ -1017,7 +1016,7 @@ body.home-page {
     transform: translateY(-1px);
 }
 
-/* Button group styling for better cohesion */
+
 .hero-actions .btn-group {
     display: flex;
     gap: 1rem;
@@ -1053,7 +1052,7 @@ body.home-page {
     font-size: 0.9rem;
 }
 
-/* Video Section */
+
 .video-section {
     padding: 2rem 0;
 }
@@ -1142,7 +1141,7 @@ body.home-page {
     transform: scale(0.95);
 }
 
-/* Video playing state */
+
 .video-wrapper.playing .video-overlay {
     opacity: 0;
 }
@@ -1151,7 +1150,7 @@ body.home-page {
     opacity: 1;
 }
 
-/* Features Section */
+
 .features-section {
     background: white;
     padding: 5rem 0;
@@ -1212,7 +1211,7 @@ body.home-page {
     line-height: 1.6;
 }
 
-/* Footer */
+
 .footer {
     background: var(--bg-secondary);
     padding: 3rem 0;
@@ -1248,7 +1247,7 @@ body.home-page {
     color: var(--primary-color);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;
@@ -1300,7 +1299,7 @@ body.home-page {
     }
 }
 
-/* Dark Mode Support for Home Page */
+
 [data-theme="dark"] .features-section {
     background: var(--bg-primary);
 }
