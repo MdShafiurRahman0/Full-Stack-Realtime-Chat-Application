@@ -88,23 +88,19 @@ You need to create a `.env` file to store your database credentials and other se
 
    a. Create a new file named `.env` in the root directory of the project.
    
-   b. Copy the content below and paste it into your new `.env` file.
+   b. Copy the content below and paste it into your new `.env` file. This file contains the environment variables for the database connection and JWT settings.
 
 ```dotenv
-# --- Database Configuration ---
-# Replace values with your local MySQL setup
 DATABASE = nodejs-login
 DATABASE_HOST = localhost
 DATABASE_USER = root
-DATABASE_PASSWORD = your_secret_password
+DATABASE_PASSWORD = 
 
-# --- JWT Configuration ---
-# You can change this secret for added security
 JWT_SECRET=mysecret
 JWT_EXPIRES_IN=90d
-JWT_COOKIE_EXPIRES=90
+JWT_COOKIE_EXPIRES=90 
 ```
-   > **Important:** Remember to replace `your_secret_password` with your actual MySQL root password or the password for the user you specified.
+   > **Important:** The `.env` file is included in the `.gitignore` and should not be committed to the repository. Each team member should create their own `.env` file. The `DATABASE_PASSWORD` is empty in this example. Please use your own local MySQL root password or the password for the user you specified.
 
 **Step 4: Set Up the Database**
 Connect to your MySQL instance and run the following SQL commands to create the database and the required `users` table.
